@@ -64,6 +64,14 @@ class Main {
         bijou3.setPrix(200);
         System.out.println(bijou3.getPrix());
 
+        //Location de biens
+
+        System.out.println("--------------------------------");
+
+        System.out.println(habitant1.getArgent());
+        habitant1.louerBien(habitant2,livre1,30);
+        System.out.println(habitant1.getArgent());
+
 
         //Achat bien entre habitant
         habitant4.achatBien(habitant3, bijou4);

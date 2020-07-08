@@ -13,7 +13,7 @@ public class HabitantService {
         int count = 0 ;
         for(Bien bien: habitant.getBiens()){
 
-            if (bien.getClass()==Bijou.class){
+            if (bien instanceof Bijou){
 
                 if(((Bijou) bien).getBijouClr().equals("rouge")){
 
