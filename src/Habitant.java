@@ -91,7 +91,19 @@ class Habitant {
     }
     public void achatBien(Habitant habitant,Bien bien){
         habitant.setArgent(habitant.getArgent()+bien.getPrix());
+        setArgent(getArgent()-bien.getPrix());
         getBiens().add(bien);
         habitant.getBiens().remove(bien);
+    }
+
+    @Override
+    public
+    String toString() {
+        return "Habitant{" +
+                "nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", argent=" + argent +
+                ", biens=" + getBiens() +
+                '}';
     }
 }
