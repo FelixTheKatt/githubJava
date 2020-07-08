@@ -23,6 +23,13 @@ public class Bijou extends Bien {
         return remboursement;
     }
 
+
+    public void setPrix(double prix) {
+
+        if(prix>getPrix()) super.setPrix(prix);
+    }
+
+
     @Override
     public String toString() {
 

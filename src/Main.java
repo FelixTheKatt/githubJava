@@ -1,13 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public
 class Main {
-    public static
-    void main(String[] args) {
+    public static void main(String[] args) {
 
         Habitant habitant1 = new Habitant("Albert", "Polak", 9400.30);
         Habitant habitant2 = new Habitant("Bob", "Lonzo", 1541.7);
         Habitant habitant3 = new Habitant("Céline", "Goutier", 600.99);
         Habitant habitant4 = new Habitant("Dominique", "Dio", 9458.14);
         Habitant habitant5 = new Habitant("Eric", "Marloi", 6971.22);
+
+        ArrayList<Habitant> habitants = new ArrayList<>();
+        habitants.add(habitant1);
+        habitants.add(habitant2);
+        habitants.add(habitant3);
+        habitants.add(habitant4);
+        habitants.add(habitant5);
+
 
         Bien bijou1 = new Bijou(97.45, "bleu");
         Bien bijou2 = new Bijou(50, "bleu");
@@ -33,42 +43,31 @@ class Main {
         Bien livre3 = new Livre(20.81, "Feu et Sang - Les origines de Game of Thrones Tome 2 : Le règne des Targaryen");
         Bien livre4 = new Livre(18.05, "Le schmock");
 
+
         habitant2.ajouterBiens(livre1, livre2);
         habitant3.ajouterBiens(livre3);
         habitant4.ajouterBiens(livre4);
 
+        habitant1.afficherBien();
+        habitant1.totalBienValeur();
+
+        //Ajout vêtements
+        Bien vetement1 = new Vetement(45, Taille.XL);
+        Bien vetement2 = new Vetement(15, Taille.M);
+        habitant4.ajouterBiens(vetement1, vetement2);
+
+        //Récupérer celui qui a le plus de bijoux rouges
+        System.out.println(HabitantService.sortByRed(habitants));
+
+        //Verif sur le prix
+        System.out.println(bijou3.getPrix());
+        bijou3.setPrix(200);
+        System.out.println(bijou3.getPrix());
 
 
-        Bien vetement1= new Vetement(45,Taille.XL);
-        Bien vetement2= new Vetement(15,Taille.M);
+        //Achat bien entre habitant
+        habitant4.achatBien(habitant3, bijou4);
 
-//        habitant1.afficherBien();
-//        habitant1.totalBienValeur();
-
-        habitant1.louerBien(habitant2,bijou8,5);
-        habitant1.louerBien(habitant2,livre1,5);
-
-//
-//        System.out.println("111-----------------------");
-//        habitant4.afficherBien();
-//        habitant4.totalBienValeur();
-        System.out.println("----------------------");
-        habitant3.afficherBien();
-        habitant3.totalBienValeur();
-
-
-      //  habitant4.ajouterBiens(vetement1,vetement2);
-        habitant4.achatBien(habitant3,bijou4);
-
-//
-//        System.out.println("2222-----------------------");
-//        habitant4.afficherBien();
-//        habitant4.totalBienValeur();
-        System.out.println("-----------------------");
-        habitant3.afficherBien();
-        habitant3.totalBienValeur();
-        System.out.println("-----------------------");
-        System.out.println(habitant1);
 
     }
 }
