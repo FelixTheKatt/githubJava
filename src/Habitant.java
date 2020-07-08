@@ -108,8 +108,9 @@ class Habitant {
 
             if (bien instanceof Livre ){
                 int nb = jour/15;
-                if (nb%15 !=0){
-                    nb++;
+                if(jour%15!=0 ||nb==0){
+
+                    nb+=1;
                 }
                 double prix = (bien.getPrix()*nb);
                 double pourcent = (prix * 10) / 100;
