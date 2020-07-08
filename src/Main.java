@@ -39,6 +39,7 @@ class Main {
 
         habitant1.afficherBien();
         habitant1.totalBienValeur();
+        System.out.println(habitant1);
 
     }
 }
