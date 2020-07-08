@@ -3,18 +3,17 @@ package Habitants;
 import datas.Bien;
 import datas.Bijou;
 import datas.Interfaces.Louable;
-import datas.Livre;
 import datas.Vetement;
 
 import java.util.ArrayList;
 
 public
 class Habitant implements IService {
+    private final ArrayList<Bien> biensvendu = new ArrayList<>();
     private String nom;
     private String prenom;
     private Double argent;
     private ArrayList<Bien> biens;
-    private final ArrayList<Bien> biensvendu= new ArrayList<>();
 
     public
     Habitant() {
@@ -70,7 +69,7 @@ class Habitant implements IService {
 
     public
     void ajouterBiens(Bien... biens) {
-        for (Bien item: biens) {
+        for (Bien item : biens) {
             getBiens().add(item);
         }
     }
@@ -96,16 +95,16 @@ class Habitant implements IService {
     }
 
     public
-    void louerBien(Habitant habitant,Bien bien, int jour) {
-                ((Louable) bien).louable(habitant,jour);
+    void louerBien(Habitant habitant, Bien bien, int jour) {
+        ((Louable) bien).louable(habitant, jour);
     }
 
     @Override
     public
     void louerService(Habitant habitant, String service, int jour) {
-        int pricePerDay = 75;
+        final int pricePerDay = 75;
         int total = jour * pricePerDay;
-        System.out.println(habitant.getNom() + " "+ service + " chez" + " " + getNom() + " " + jour + " jours " + total);
+        System.out.println(habitant.getNom() + " " + service + " chez" + " " + getNom() + " " + jour + " jours " + total);
         setArgent(getArgent() + total);
         habitant.setArgent(getArgent() + total);
     }
@@ -121,27 +120,25 @@ class Habitant implements IService {
                 '}';
     }
 
-    public void getRembours(Bien bien,Habitant habitant){
+    public
+    void getRembours(Bien bien, Habitant habitant) {
 
-        if (bien instanceof Bijou || bien instanceof Vetement){
+        if (bien instanceof Bijou || bien instanceof Vetement) {
 
-            if(habitant.getBiensVendu().contains(bien)){
+            if (habitant.getBiensVendu().contains(bien)) {
 
-                setArgent(getArgent()+bien.getPrix());
+                setArgent(getArgent() + bien.getPrix());
                 getBiens().remove(bien);
 
-                habitant.setArgent(habitant.getArgent()-bien.getPrix());
+                habitant.setArgent(habitant.getArgent() - bien.getPrix());
                 habitant.ajouterBiens(bien);
                 habitant.getBiensVendu().remove(bien);
-            }
-
-            else System.out.println("Ce bien n'a pas été vendu par ce vendeur");
-        }
-
-        else System.out.println("Ce bien n'est pas remboursable");
+            } else System.out.println("Ce bien n'a pas été vendu par ce vendeur");
+        } else System.out.println("Ce bien n'est pas remboursable");
     }
 
-    private ArrayList<Bien> getBiensVendu() {
+    private
+    ArrayList<Bien> getBiensVendu() {
 
         return biensvendu;
     }
