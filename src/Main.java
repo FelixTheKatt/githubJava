@@ -1,9 +1,13 @@
+import Habitants.Habitant;
+import Habitants.Services.HabitantService;
+import datas.*;
+
 import java.util.ArrayList;
-import java.util.List;
 
 public
 class Main {
-    public static void main(String[] args) {
+    public static
+    void main(String[] args) {
 
         Habitant habitant1 = new Habitant("Albert", "Polak", 9400.30);
         Habitant habitant2 = new Habitant("Bob", "Lonzo", 1541.7);
@@ -69,15 +73,15 @@ class Main {
         System.out.println("--------------------------------");
 
         System.out.println(habitant1.getArgent());
-        habitant1.louerBien(habitant2,livre1,30);
+        habitant1.louerBien(habitant2, livre1, 30);
         System.out.println(habitant1.getArgent());
 
 
         //Achat bien entre habitant
         habitant4.achatBien(habitant3, bijou4);
 
-        habitant1.louerBien(habitant2,livre1,30);
+        habitant1.louerBien(habitant2, livre1, 30);
 
-        habitant1.louerService(habitant2,"tondre",5);
+        habitant1.louerService(habitant2, "tondre", 5);
     }
 }

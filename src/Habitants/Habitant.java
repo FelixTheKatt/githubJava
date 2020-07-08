@@ -1,3 +1,9 @@
+package Habitants;
+
+import datas.Bien;
+import datas.Bijou;
+import datas.Livre;
+
 import java.util.ArrayList;
 
 public
@@ -144,12 +150,12 @@ class Habitant {
         int total = jour * pricePerDay;
         switch (service.toLowerCase()) {
             case "tondre":
-                System.out.println(habitant.getNom() + " tond" + " chez" + " " + getNom() + " " + jour + " jours" + total);
+                System.out.println(habitant.getNom() + " tond" + " chez" + " " + getNom() + " " + jour + " jours " + total);
                 setArgent(getArgent() + total);
                 habitant.setArgent(getArgent() + total);
                 break;
             case "laver":
-                System.out.println(habitant.getNom() + " lave" + " chez" + " " + getNom() + " " + jour + " " + total);
+                System.out.println(habitant.getNom() + " lave" + " chez" + " " + getNom() + " " + jour + "jours " + total);
                 setArgent(getArgent() + total);
                 habitant.setArgent(getArgent() + total);
                 break;
@@ -162,7 +168,7 @@ class Habitant {
     @Override
     public
     String toString() {
-        return "Habitant{" +
+        return "Habitants.Services.Habitant{" +
                 "nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
                 ", argent=" + argent +

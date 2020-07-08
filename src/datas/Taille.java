@@ -1,4 +1,7 @@
-public enum Taille {
+package datas;
+
+public
+enum Taille {
 
 
     XS("Très petit"),
@@ -9,12 +12,13 @@ public enum Taille {
 
     private String taille;
 
-    Taille(String taille){
+    Taille(String taille) {
 
-        this.taille=taille;
+        this.taille = taille;
     }
 
-    public String getTaille() {
+    public
+    String getTaille() {
         return taille;
     }
 }
