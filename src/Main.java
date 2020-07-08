@@ -52,44 +52,46 @@ class Main {
         habitant3.ajouterBiens(livre3);
         habitant4.ajouterBiens(livre4);
 
-        habitant1.afficherBien();
-        habitant1.totalBienValeur();
-
         //Ajout vêtements
         Bien vetement1 = new Vetement(45, Taille.XL);
         Bien vetement2 = new Vetement(15, Taille.M);
         habitant4.ajouterBiens(vetement1, vetement2);
 
-        //Récupérer celui qui a le plus de bijoux rouges
-        System.out.println(HabitantService.sortByRed(habitants));
+        //Afficher biens + override tostring
+        habitant1.afficherBien();
 
-        //Verif sur le prix
-        System.out.println(bijou3.getPrix());
-        bijou3.setPrix(200);
-        System.out.println(bijou3.getPrix());
-
-        //Location de biens
-
-        System.out.println("--------------------------------");
-
-        System.out.println(habitant1.getArgent());
-        habitant1.louerBien(habitant2, livre1, 30);
-        System.out.println(habitant1.getArgent());
-
+        //Afficher prix
+        habitant1.totalBienValeur();
 
         //Achat bien entre habitant
         habitant4.achatBien(habitant3, bijou4);
 
-        habitant1.louerBien(habitant2, livre1, 30);
 
-
+        //Location de biens
         System.out.println("--------------------------------");
+
+        System.out.println(habitant1.getArgent());
+        habitant1.louerBien(habitant2, livre1, 30);
+        System.out.println(habitant1.getArgent());
+        habitant1.louerBien(habitant2, livre1, 30);
 
         //Remboursement
 
         habitant4.getRembours(bijou4, habitant3);
         habitant4.getRembours(bijou3, habitant3);
         habitant4.getRembours(livre1, habitant3);
+
+        //Verif sur le prix
+        System.out.println(bijou3.getPrix());
+        bijou3.setPrix(200);
+        System.out.println(bijou3.getPrix());
+
+        System.out.println("--------------------------------");
+
+        //Récupérer celui qui a le plus de bijoux rouges
+        System.out.println(HabitantService.sortByRed(habitants));
+
+
 
 
     }
