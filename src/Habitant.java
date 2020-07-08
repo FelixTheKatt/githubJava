@@ -104,7 +104,7 @@ class Habitant {
 
                 double prix = (bien.getPrix()*jour);
                 double pourcent = (prix * 15) / 100;
-                setArgent(-pourcent);
+                setArgent(getArgent()-pourcent);
             }
             if (bien instanceof Livre ){
                 int nb = jour/15;
@@ -113,7 +113,7 @@ class Habitant {
                 }
                 double prix = (bien.getPrix()*nb);
                 double pourcent = (prix * 10) / 100;
-                setArgent(-pourcent);
+                setArgent(getArgent()-pourcent);
             }
         }
         else {

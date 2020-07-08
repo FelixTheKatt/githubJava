@@ -4,7 +4,6 @@
     <list default="true" id="0ecb73af-c6fc-4414-a95c-443025d680eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Habitant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Habitant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +34,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -90,42 +93,65 @@
       <option name="project" value="LOCAL" />
       <updated>1594206553055</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="habitant modif achat">
+      <created>1594208825291</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1594208825291</updated>
+    </task>
+    <task id="LOCAL-00004" summary="habitant modif louerBIEN MODulo">
+      <created>1594209352814</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594209352814</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="habitant func" />
     <MESSAGE value="habitant modif achat" />
-    <option name="LAST_COMMIT_MESSAGE" value="habitant modif achat" />
+    <MESSAGE value="habitant modif louerBIEN MODulo" />
+    <option name="LAST_COMMIT_MESSAGE" value="habitant modif louerBIEN MODulo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1594206066689">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1594206066689" />
-    <state x="405" y="6" key="CommitChangelistDialog2" timestamp="1594206550225">
+    <state x="405" y="6" key="CommitChangelistDialog2" timestamp="1594209349234">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="405" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1594206550225" />
-    <state width="746" height="210" key="GridCell.Tab.0.bottom" timestamp="1594208777558">
+    <state x="405" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1594209349234" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1594209323716">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594208777558" />
-    <state width="746" height="210" key="GridCell.Tab.0.center" timestamp="1594208777558">
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1594209323716" />
+    <state width="746" height="210" key="GridCell.Tab.0.bottom" timestamp="1594209295881">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594208777558" />
-    <state width="746" height="210" key="GridCell.Tab.0.left" timestamp="1594208777558">
+    <state width="746" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594209295881" />
+    <state width="746" height="210" key="GridCell.Tab.0.center" timestamp="1594209295881">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594208777558" />
-    <state width="746" height="210" key="GridCell.Tab.0.right" timestamp="1594208777558">
+    <state width="746" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594209295881" />
+    <state width="746" height="210" key="GridCell.Tab.0.left" timestamp="1594209295881">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594208777558" />
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594208799625">
+    <state width="746" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594209295881" />
+    <state width="746" height="210" key="GridCell.Tab.0.right" timestamp="1594209295881">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1594208799625" />
+    <state width="746" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594209295881" />
+    <state x="498" y="305" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1594209033433">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="305" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1594209033433" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594209521310">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1594209521310" />
   </component>
 </project>
