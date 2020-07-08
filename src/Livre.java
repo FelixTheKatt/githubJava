@@ -1,6 +1,17 @@
 public class Livre extends Bien {
 
-    public Livre(float prix) {
+    private String titre;
+
+    public Livre(double prix,String titre) {
         super(prix);
+        setTitre(titre);
+    }
+
+    public String getTitre() {
+        return titre;
+    }
+
+    public void setTitre(String titre) {
+        this.titre = titre;
     }
 }

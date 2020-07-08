@@ -1,16 +1,16 @@
 public class Bien {
 
-    private  float prix;
+    private  double prix;
 
-    public Bien(float prix) {
+    public Bien(double prix) {
         setPrix(prix);
     }
 
-    public float getPrix() {
+    public double getPrix() {
         return prix;
     }
 
-    public void setPrix(float prix) {
+    public void setPrix(double prix) {
         this.prix = prix;
     }
 }
