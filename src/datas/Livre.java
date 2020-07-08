@@ -1,9 +1,10 @@
 package datas;
 
 import datas.Bien;
+import datas.Interfaces.Louable;
 
 public
-class Livre extends Bien {
+class Livre extends Bien implements Louable {
 
     private String titre;
 
@@ -28,5 +29,11 @@ class Livre extends Bien {
     String toString() {
 
         return "datas.Livre à " + getPrix() + ".\n" + "Titre: " + getTitre();
+    }
+
+    @Override
+    public
+    void louable() {
+
     }
 }

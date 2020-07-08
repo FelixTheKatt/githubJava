@@ -2,11 +2,11 @@ package Habitants;
 
 import datas.Bien;
 import datas.Bijou;
+import datas.Interfaces.Louable;
 import datas.Livre;
 import datas.Vetement;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 public
 class Habitant {
@@ -96,8 +96,12 @@ class Habitant {
     }
 
     public
-    void louerBien(Habitant habitant, Bien bien, int jour) {
-        if (habitant.getBiens().contains(bien)) {
+    void louerBien(Habitant habitant,Bien bien, int jour) {
+        if (!(bien instanceof Louable))
+            throw new IllegalArgumentException("Bien must be bijou or livre");
+        else if (habitant.getBiens().contains(bien))
+            throw new IllegalArgumentException(habitant.getNom() + " doit posseder le bien");
+        else {
             if (bien instanceof Bijou) {
 
                 double prix = (bien.getPrix() * jour);
@@ -115,10 +119,7 @@ class Habitant {
                 double pourcent = (prix * 10) / 100;
                 setArgent(getArgent() - pourcent);
             }
-        } else {
-            System.out.println("wrong param");
         }
-
     }
 
     public

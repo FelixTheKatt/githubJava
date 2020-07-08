@@ -69,7 +69,10 @@ class Main {
 
         //Location de biens
         System.out.println("--------------------------------");
-
+        System.out.println(habitant1.getArgent());
+        habitant1.louerBien(habitant2, vetement2, 30);
+        System.out.println(habitant1.getArgent());
+        habitant1.louerBien(habitant2, livre3, 30);
         System.out.println(habitant1.getArgent());
         habitant1.louerBien(habitant2, livre1, 30);
         System.out.println(habitant1.getArgent());

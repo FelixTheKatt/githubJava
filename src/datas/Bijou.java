@@ -1,9 +1,10 @@
 package datas;
 
 import datas.Bien;
+import datas.Interfaces.Louable;
 
 public
-class Bijou extends Bien {
+class Bijou extends Bien implements Louable {
 
     private final int remboursement = 95;
     private String bijouClr;
@@ -43,5 +44,11 @@ class Bijou extends Bien {
     String toString() {
 
         return "datas.Bijou à " + getPrix() + ".\n" + "Couleur: " + getBijouClr();
+    }
+
+    @Override
+    public
+    void louable() {
+
     }
 }
