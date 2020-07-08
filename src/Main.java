@@ -77,5 +77,7 @@ class Main {
         habitant4.achatBien(habitant3, bijou4);
 
         habitant1.louerBien(habitant2,livre1,30);
+
+        habitant1.louerService(habitant2,"tondre",5);
     }
 }

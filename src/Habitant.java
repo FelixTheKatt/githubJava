@@ -123,6 +123,27 @@ class Habitant {
 
     }
 
+    public void louerService(Habitant habitant,String service, int jour){
+        int pricePerDay = 75;
+        int total = jour*pricePerDay;
+        switch (service.toLowerCase()){
+            case "tondre":
+                System.out.println(habitant.getNom()+ " tond"+" chez"+" "+getNom()+" "+ jour +" jours"+ total);
+                setArgent(getArgent()+total);
+                habitant.setArgent(getArgent()+total);
+                break;
+            case "laver":
+                System.out.println(habitant.getNom()+ " lave"+" chez"+" "+getNom()+" "+ jour +" "+ total);
+                setArgent(getArgent()+total);
+                habitant.setArgent(getArgent()+total);
+                break;
+            default:
+                System.out.println("pas de service " + habitant.getNom() + " n'es past un esclave");
+        }
+    }
+
+
+
     @Override
     public
     String toString() {
