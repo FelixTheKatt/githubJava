@@ -3,8 +3,10 @@ package Habitants;
 import datas.Bien;
 import datas.Bijou;
 import datas.Livre;
+import datas.Vetement;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 public
 class Habitant {
@@ -12,6 +14,7 @@ class Habitant {
     private String prenom;
     private Double argent;
     private ArrayList<Bien> biens;
+    private final ArrayList<Bien> biensvendu= new ArrayList<>();
 
     public
     Habitant() {
@@ -116,6 +119,7 @@ class Habitant {
         setArgent(getArgent() - bien.getPrix());
         getBiens().add(bien);
         habitant.getBiens().remove(bien);
+        habitant.getBiensVendu().add(bien);
     }
 
     public
@@ -174,5 +178,30 @@ class Habitant {
                 ", argent=" + argent +
                 ", biens=" + getBiens() +
                 '}';
+    }
+
+    public void getRembours(Bien bien,Habitant habitant){
+
+        if (bien instanceof Bijou || bien instanceof Vetement){
+
+            if(habitant.getBiensVendu().contains(bien)){
+
+                setArgent(getArgent()+bien.getPrix());
+                getBiens().remove(bien);
+
+                habitant.setArgent(habitant.getArgent()-bien.getPrix());
+                habitant.ajouterBiens(bien);
+                habitant.getBiensVendu().remove(bien);
+            }
+
+            else System.out.println("Ce bien n'a pas été vendu par ce vendeur");
+        }
+
+        else System.out.println("Ce bien n'est pas remboursable");
+    }
+
+    private ArrayList<Bien> getBiensVendu() {
+
+        return biensvendu;
     }
 }

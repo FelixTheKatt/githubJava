@@ -3,11 +3,11 @@ import Habitants.Services.HabitantService;
 import datas.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public
 class Main {
-    public static
-    void main(String[] args) {
+    public static void main(String[] args) {
 
         Habitant habitant1 = new Habitant("Albert", "Polak", 9400.30);
         Habitant habitant2 = new Habitant("Bob", "Lonzo", 1541.7);
@@ -82,6 +82,15 @@ class Main {
 
         habitant1.louerBien(habitant2, livre1, 30);
 
-        habitant1.louerService(habitant2, "tondre", 5);
+
+        System.out.println("--------------------------------");
+
+        //Remboursement
+
+        habitant4.getRembours(bijou4, habitant3);
+        habitant4.getRembours(bijou3, habitant3);
+        habitant4.getRembours(livre1, habitant3);
+
+
     }
 }
