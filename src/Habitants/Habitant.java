@@ -53,7 +53,7 @@ class Habitant {
         return argent;
     }
 
-    private
+    public
     void setArgent(Double argent) {
         this.argent = argent;
     }
@@ -97,29 +97,7 @@ class Habitant {
 
     public
     void louerBien(Habitant habitant,Bien bien, int jour) {
-        if (!(bien instanceof Louable))
-            throw new IllegalArgumentException("Bien must be bijou or livre");
-        else if (habitant.getBiens().contains(bien))
-            throw new IllegalArgumentException(habitant.getNom() + " doit posseder le bien");
-        else {
-            if (bien instanceof Bijou) {
-
-                double prix = (bien.getPrix() * jour);
-                double pourcent = (prix * 15) / 100;
-                setArgent(getArgent() - pourcent);
-            }
-
-            if (bien instanceof Livre) {
-                int nb = jour / 15;
-                if (jour % 15 != 0 || nb == 0) {
-
-                    nb += 1;
-                }
-                double prix = (bien.getPrix() * nb);
-                double pourcent = (prix * 10) / 100;
-                setArgent(getArgent() - pourcent);
-            }
-        }
+                ((Louable) bien).louable(habitant,jour);
     }
 
     public

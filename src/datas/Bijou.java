@@ -1,5 +1,6 @@
 package datas;
 
+import Habitants.Habitant;
 import datas.Bien;
 import datas.Interfaces.Louable;
 
@@ -48,7 +49,9 @@ class Bijou extends Bien implements Louable {
 
     @Override
     public
-    void louable() {
-
+    void louable(Habitant habitant, int jour) {
+        double prix = (this.getPrix() * jour);
+        double pourcent = (prix * 15) / 100;
+        habitant.setArgent(habitant.getArgent() - pourcent);
     }
 }

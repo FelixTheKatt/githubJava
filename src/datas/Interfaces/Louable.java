@@ -1,6 +1,8 @@
 package datas.Interfaces;
 
+import Habitants.Habitant;
+
 public
 interface Louable {
-     void louable();
+     void louable(Habitant habitant, int jour);
 }
