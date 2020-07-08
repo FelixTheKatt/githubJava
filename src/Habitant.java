@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public
@@ -89,14 +91,14 @@ class Habitant {
     public void totalBienValeur(){
         System.out.println(getBiens().stream().mapToDouble(Bien::getPrix).sum());
     }
-    public void achatBien(Habitant habitant,Bien bien){
+    public void achatBien(@NotNull Habitant habitant, @NotNull Bien bien){
         habitant.setArgent(habitant.getArgent()+bien.getPrix());
         setArgent(getArgent()-bien.getPrix());
         getBiens().add(bien);
         habitant.getBiens().remove(bien);
     }
 
-    public void louerBien (Habitant habitant,Bien bien,int jour){
+    public void louerBien (@NotNull Habitant habitant, Bien bien, int jour){
         if (habitant.getBiens().contains(bien)){
             if (bien instanceof Bijou ){
 
@@ -106,7 +108,10 @@ class Habitant {
             }
             if (bien instanceof Livre ){
                 int nb = jour/15;
-                double prix = (bien.getPrix()*nb+1);
+                if (nb%15 !=0){
+                    nb++;
+                }
+                double prix = (bien.getPrix()*nb);
                 double pourcent = (prix * 10) / 100;
                 setArgent(-pourcent);
             }
