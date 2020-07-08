@@ -37,8 +37,33 @@ class Main {
         habitant3.ajouterBiens(livre3);
         habitant4.ajouterBiens(livre4);
 
-        habitant1.afficherBien();
-        habitant1.totalBienValeur();
+     //   habitant1.afficherBien();
+    //    habitant1.totalBienValeur();
+
+        Bien vetement1= new Vetement(45,Taille.XL);
+        Bien vetement2= new Vetement(15,Taille.M);
+
+
+////
+////        System.out.println("111-----------------------");
+////        habitant4.afficherBien();
+////        habitant4.totalBienValeur();
+//        System.out.println("----------------------");
+//        habitant3.afficherBien();
+//        habitant3.totalBienValeur();
+//
+//
+//      //  habitant4.ajouterBiens(vetement1,vetement2);
+//        habitant4.achatBien(habitant3,bijou4);
+//
+////
+////        System.out.println("2222-----------------------");
+////        habitant4.afficherBien();
+////        habitant4.totalBienValeur();
+//        System.out.println("-----------------------");
+//        habitant3.afficherBien();
+//        habitant3.totalBienValeur();
+//        System.out.println("-----------------------");
         System.out.println(habitant1);
 
     }
