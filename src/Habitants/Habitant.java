@@ -9,7 +9,7 @@ import datas.Vetement;
 import java.util.ArrayList;
 
 public
-class Habitant {
+class Habitant implements IService {
     private String nom;
     private String prenom;
     private Double argent;
@@ -100,26 +100,15 @@ class Habitant {
                 ((Louable) bien).louable(habitant,jour);
     }
 
+    @Override
     public
     void louerService(Habitant habitant, String service, int jour) {
         int pricePerDay = 75;
         int total = jour * pricePerDay;
-        switch (service.toLowerCase()) {
-            case "tondre":
-                System.out.println(habitant.getNom() + " tond" + " chez" + " " + getNom() + " " + jour + " jours " + total);
-                setArgent(getArgent() + total);
-                habitant.setArgent(getArgent() + total);
-                break;
-            case "laver":
-                System.out.println(habitant.getNom() + " lave" + " chez" + " " + getNom() + " " + jour + "jours " + total);
-                setArgent(getArgent() + total);
-                habitant.setArgent(getArgent() + total);
-                break;
-            default:
-                System.out.println("pas de service " + habitant.getNom() + " n'es past un esclave");
-        }
+        System.out.println(habitant.getNom() + " "+ service + " chez" + " " + getNom() + " " + jour + " jours " + total);
+        setArgent(getArgent() + total);
+        habitant.setArgent(getArgent() + total);
     }
-
 
     @Override
     public
@@ -156,4 +145,6 @@ class Habitant {
 
         return biensvendu;
     }
+
+
 }
