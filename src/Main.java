@@ -37,5 +37,8 @@ class Main {
         habitant3.ajouterBiens(livre3);
         habitant4.ajouterBiens(livre4);
 
+        habitant1.afficherBien();
+        habitant1.totalBienValeur();
+
     }
 }
