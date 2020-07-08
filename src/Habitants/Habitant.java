@@ -69,39 +69,12 @@ class Habitant {
     }
 
     public
-    void ajouterBiens(Bien bien) {
-        biens.add(bien);
+    void ajouterBiens(Bien... biens) {
+        for (Bien item: biens) {
+            getBiens().add(item);
+        }
     }
 
-    public
-    void ajouterBiens(Bien bien, Bien bien2) {
-        biens.add(bien);
-        biens.add(bien2);
-    }
-
-    public
-    void ajouterBiens(Bien bien, Bien bien2, Bien bien3) {
-        biens.add(bien);
-        biens.add(bien2);
-        biens.add(bien3);
-    }
-
-    public
-    void ajouterBiens(Bien bien, Bien bien2, Bien bien3, Bien bien4) {
-        biens.add(bien);
-        biens.add(bien2);
-        biens.add(bien3);
-        biens.add(bien4);
-    }
-
-    public
-    void ajouterBiens(Bien bien, Bien bien2, Bien bien3, Bien bien4, Bien bien5) {
-        biens.add(bien);
-        biens.add(bien2);
-        biens.add(bien3);
-        biens.add(bien4);
-        biens.add(bien5);
-    }
 
     public
     void afficherBien() {
