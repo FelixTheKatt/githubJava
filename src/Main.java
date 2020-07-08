@@ -1,9 +1,8 @@
-import Habitants.Habitant;
-import Habitants.Services.HabitantService;
+import habitants.Habitant;
+import habitants.services.HabitantService;
 import datas.*;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public
 class Main {

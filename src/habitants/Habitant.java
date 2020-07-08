@@ -1,4 +1,4 @@
-package Habitants;
+package habitants;
 
 import datas.Bien;
 import datas.Bijou;
@@ -6,14 +6,13 @@ import datas.Livre;
 import datas.Vetement;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 public
 class Habitant {
     private String nom;
     private String prenom;
     private Double argent;
-    private ArrayList<Bien> biens;
+    private  ArrayList<Bien> biens;
     private final ArrayList<Bien> biensvendu= new ArrayList<>();
 
     public
@@ -26,46 +25,6 @@ class Habitant {
         setPrenom(prenom);
         setArgent(argent);
         setBiens(new ArrayList<>());
-    }
-
-    public
-    String getNom() {
-        return nom;
-    }
-
-    private
-    void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public
-    String getPrenom() {
-        return prenom;
-    }
-
-    private
-    void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
-
-    public
-    Double getArgent() {
-        return argent;
-    }
-
-    private
-    void setArgent(Double argent) {
-        this.argent = argent;
-    }
-
-    public
-    ArrayList<Bien> getBiens() {
-        return biens;
-    }
-
-    private
-    void setBiens(ArrayList<Bien> biens) {
-        this.biens = biens;
     }
 
     public
@@ -203,5 +162,45 @@ class Habitant {
     private ArrayList<Bien> getBiensVendu() {
 
         return biensvendu;
+    }
+
+    public
+    String getNom() {
+        return nom;
+    }
+
+    private
+    void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public
+    String getPrenom() {
+        return prenom;
+    }
+
+    private
+    void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public
+    Double getArgent() {
+        return argent;
+    }
+
+    private
+    void setArgent(Double argent) {
+        this.argent = argent;
+    }
+
+    public
+    ArrayList<Bien> getBiens() {
+        return biens;
+    }
+
+    private
+    void setBiens(ArrayList<Bien> biens) {
+        this.biens = biens;
     }
 }

@@ -1,6 +1,6 @@
-package Habitants.Services;
+package habitants.services;
 
-import Habitants.Habitant;
+import habitants.Habitant;
 import datas.Bien;
 import datas.Bijou;
 

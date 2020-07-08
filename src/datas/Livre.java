@@ -13,6 +13,13 @@ class Livre extends Bien {
         setTitre(titre);
     }
 
+    @Override
+    public
+    String toString() {
+
+        return "datas.Livre à " + getPrix() + ".\n" + "Titre: " + getTitre();
+    }
+
     public
     String getTitre() {
         return titre;
@@ -21,12 +28,5 @@ class Livre extends Bien {
     public
     void setTitre(String titre) {
         this.titre = titre;
-    }
-
-    @Override
-    public
-    String toString() {
-
-        return "datas.Livre à " + getPrix() + ".\n" + "Titre: " + getTitre();
     }
 }

@@ -15,6 +15,14 @@ class Bijou extends Bien {
         setBijouClr(bijouClr);
     }
 
+
+    @Override
+    public
+    String toString() {
+
+        return "datas.Bijou à " + getPrix() + ".\n" + "Couleur: " + getBijouClr();
+    }
+
     public
     String getBijouClr() {
         return bijouClr;
@@ -35,13 +43,5 @@ class Bijou extends Bien {
     void setPrix(double prix) {
 
         if (prix > getPrix()) super.setPrix(prix);
-    }
-
-
-    @Override
-    public
-    String toString() {
-
-        return "datas.Bijou à " + getPrix() + ".\n" + "Couleur: " + getBijouClr();
     }
 }
