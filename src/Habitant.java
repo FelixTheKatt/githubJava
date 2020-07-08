@@ -96,6 +96,27 @@ class Habitant {
         habitant.getBiens().remove(bien);
     }
 
+    public void louerBien (Habitant habitant,Bien bien,int jour){
+        if (habitant.getBiens().contains(bien)){
+            if (bien instanceof Bijou ){
+
+                double prix = (bien.getPrix()*jour);
+                double pourcent = (prix * 15) / 100;
+                setArgent(-pourcent);
+            }
+            if (bien instanceof Livre ){
+                int nb = jour/15;
+                double prix = (bien.getPrix()*nb+1);
+                double pourcent = (prix * 10) / 100;
+                setArgent(-pourcent);
+            }
+        }
+        else {
+            System.out.println("wrong param");
+        }
+
+    }
+
     @Override
     public
     String toString() {
