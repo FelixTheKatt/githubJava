@@ -98,7 +98,7 @@ class Habitant {
         habitant.getBiens().remove(bien);
     }
 
-    public void louerBien (@NotNull Habitant habitant, Bien bien, int jour){
+    public void louerBien (Habitant habitant, Bien bien, int jour){
         if (habitant.getBiens().contains(bien)){
             if (bien instanceof Bijou ){
 
@@ -108,11 +108,12 @@ class Habitant {
             }
             if (bien instanceof Livre ){
                 int nb = jour/15;
-                if (nb%15 !=0){
-                    nb++;
+                if (jour%15 !=0 || nb == 0){
+                    nb+=1;
                 }
                 double prix = (bien.getPrix()*nb);
                 double pourcent = (prix * 10) / 100;
+
                 setArgent(getArgent()-pourcent);
             }
         }

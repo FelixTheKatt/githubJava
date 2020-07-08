@@ -68,6 +68,6 @@ class Main {
         //Achat bien entre habitant
         habitant4.achatBien(habitant3, bijou4);
 
-
+        habitant1.louerBien(habitant2,livre1,30);
     }
 }
